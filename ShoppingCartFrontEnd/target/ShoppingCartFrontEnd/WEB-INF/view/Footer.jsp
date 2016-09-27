@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-    <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+  
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
     
@@ -20,7 +19,7 @@
 <div class="footer">
 		<div class="container">
 			<div class="col-md-4 footer-top">
-				<h3>Quick Contact</h3>
+				<!-- <h3>Quick Contact</h3>
 				<form>
 						
 						<input type="text" value="ENTER YOUR NAME*" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='ENTER YOUR NAME*';}">
@@ -105,14 +104,14 @@
 		                    <div class="clearfix"></div>
 		                </ul>
 					<div class="clearfix"> </div>
-				</div>
+				</div> -->
 				<div class="indo">
 					<ul class="social-footer ">
 						<li><span><i class="glyphicon glyphicon-earphone"> </i>+62 226759804 </span></li>
 						<li><a href="mailto:info@example.com"><i class="glyphicon glyphicon-envelope" class="mes"> </i>info@example.com</a></li>
 						<li><a href="#"><i class="glyphicon glyphicon-link" class="mes-in"> </i>http://example.com</a></li>
 					</ul>
-					<a href="#"><img src="images/pa.png" alt=""></a>
+					<a href="#"><img src="<c:url value="resources/images/pa.png"/>" alt=""></a>
 					</div>
 			</div>
 			<div class="clearfix"> </div>

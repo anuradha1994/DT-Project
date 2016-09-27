@@ -11,6 +11,7 @@ import com.niit.shopingcart.model.Category;
 import com.niit.shopingcart.model.Product;
 import com.niit.shopingcart.model.Supplier;
 
+
 public class AdminController {
 	@Autowired
 	private Product product;

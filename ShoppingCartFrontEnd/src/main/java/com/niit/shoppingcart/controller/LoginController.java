@@ -24,6 +24,11 @@ public class LoginController {
 	public String gethomePage() {
 		return "adminHome";
 	}
+	@RequestMapping("/INDEX")
+	public String loadLoginPage1() {
+		return "INDEX";
+	}
+	
 	
 
 	@RequestMapping("/login")
@@ -36,7 +41,7 @@ public class LoginController {
 
 			System.out.println("Login failure");
 			model.addAttribute("error", "Invalid username and password");
-			return "Login";// return to login page
+			return "login";// return to login page
 		}
 		
 		System.out.println("Login success");

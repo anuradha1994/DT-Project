@@ -15,6 +15,7 @@ package com.niit.shoppingcart.controller;
 
 import com.niit.shopingcart.dao.SupplierDAO;
 import com.niit.shopingcart.model.Supplier;
+import com.niit.shoppingcart.util.Util;
 
 	
 
@@ -40,6 +41,8 @@ import com.niit.shopingcart.model.Supplier;
 		//For add and update supplier both
 		@RequestMapping(value= "/manageSupplier/add", method = RequestMethod.POST)
 		public String addSupplier(@ModelAttribute("supplier") Supplier supplier){
+			String newID=Util.removeComma(supplier.getId());
+			supplier.setId(newID);
 			
 		
 				supplierDAO.saveOrUpdate(supplier);

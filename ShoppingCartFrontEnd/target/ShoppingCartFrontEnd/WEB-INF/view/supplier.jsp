@@ -47,7 +47,7 @@
 <body>
 	<h1>Add a Supplier</h1>
 
-	<c:url var="addAction" value="/supplier/add"></c:url>
+	<c:url var="addAction" value="/manageSupplier/add"></c:url>
 
 	<form:form action="${addAction}" commandName="supplier">
 		<table>
@@ -104,8 +104,8 @@
 					<td>${supplier.id}</td>
 					<td>${supplier.name}</td>
 					<td>${supplier.address}</td>
-					<td><a href="<c:url value='supplier/edit/${supplier.id}' />">Edit</a></td>
-					<td><a href="<c:url value='supplier/remove/${supplier.id}' />">Delete</a></td>
+					<td><a href="<c:url value='manageSupplier/edit/${supplier.id}' />">Edit</a></td>
+					<td><a href="<c:url value='manageSupplier/remove/${supplier.id}' />">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>

@@ -3,6 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,15 +76,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 					<div class="header-top-in">
 						
-						<ul class="support">
+						<!-- <ul class="support">
 							<li><a href="mailto:info@example.com"><i class="glyphicon glyphicon-envelope"> </i>info@example.com</a></li>
 							<li><span><i class="glyphicon glyphicon-earphone" class="tele-in"> </i>0 462 261 61 61</span></li>			
-						</ul>
-						<ul class=" support-right">
+						</ul> -->
+						<!-- <ul class=" support-right">
 							<li><a href="login"><i class="glyphicon glyphicon-user" class="men"> </i>Login</a></li>
 							<li><a href="Register"><i class="glyphicon glyphicon-lock" class="tele"> </i>Create an Account</a></li>			
 						</ul>
-						<div class="clearfix"> </div>
+						 --><div class="clearfix"> </div>
 					</div>
 				</div>
 			</div>		
@@ -97,8 +99,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <!---->
 		 
 			<div class="top-nav">
-				<ul class="memenu skyblue"><li  class="active"><a href="index.html">Home</a></li>
-					<li class="grid"><a href="#">Men</a>
+				<ul class="memenu skyblue"><li  class="active"><a href="INDEX">Home</a></li>
+					<!-- <li class="grid"><a href="#">Men</a>
 						<div class="mepanel">
 							<div class="row">
 								<div class="col1 me-one">
@@ -232,15 +234,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</li>
 					<li class="grid"><a href="typography.html">Typo</a>
 						
-					</li>
-					<li class="grid"><a href="contact.html">Contact</a>
+					 --></li>
+					<li class="grid"><a href="Contact">Contact</a>
 						
 					</li>
 				</ul>
 				<div class="clearfix"> </div>
 			</div>
 					<!---->
-					<div class="cart box_1">
+					<!-- <div class="cart box_1">
 						<a href="checkout.html">
 						<h3> <div class="total">
 							<span class="simpleCart_total"> </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> </span>)</div>
@@ -249,7 +251,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 						<div class="clearfix"> </div>
 					</div>
-
+ -->
 <div class="clearfix"> </div>
 					<!---->
 				</div>
@@ -303,130 +305,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					<div class="fit1">
 						<h3>HAPPY SHOPPING</h3>
-						<p>Lorem Ipsum sit amet consectuer adipiscing elit
-sed diam nonummy nibh euismod</p>
+						<p>Please visit our store again.</p>
 					</div>
 				</div>
 <!---->
-	<!---->
-	<div class="footer">
-		<div class="container">
-			<div class="col-md-4 footer-top">
-				<h3>Quick Contact</h3>
-				<form>
-						
-						<input type="text" value="ENTER YOUR NAME*" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='ENTER YOUR NAME*';}">
-						
-						<input type="text" value="ENTER YOUR EMAIL*" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='ENTER YOUR EMAIL*';}">
-						
-						<input type="text" value="ENTER YOUR PHONE" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='ENTER YOUR PHONE';}">
-					
-						<textarea cols="77" rows="6" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'ENTER YOUR MESSAGE*';}">ENTER YOUR MESSAGE*</textarea>
-						
-							<input type="submit" value="SEND MESSAGE" >
-						
-					</form>
 
-			</div>
-			<div class="col-md-4 footer-middle">
-				<h3>Top Rated Products</h3>
-					<div class="product-go">
-							<div class="grid-product">
-								<h6><a href="#" >Fashion Combo Goggles</a></h6>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<span class=" price-in"><small>$70.00</small> $40.00</span>
-							</div>
-								<div class="fashion">
-									<a href="#"><img class="img-responsive " src="images/f1.jpg" alt="">
-									<p>SALE</p></a>
-								</div>
-							<div class="clearfix"> </div>
-							</div>
-								<div class="product-go">
-							<div class="grid-product">
-								<h6><a href="#" >Classic Combo Goggles</a></h6>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<span class=" price-in"><small>$70.00</small> $40.00</span>
-							</div>
-								<div class="fashion">
-									<a href="#"><img class="img-responsive " src="images/f2.jpg" alt="">
-									<p class="new1">NEW</p></a>
-								</div>
-							<div class="clearfix"> </div>
-							</div>
-								<div class="product-go">
-							<div class="grid-product">
-								<h6><a href="#" >sun Combo Goggles</a></h6>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<span class=" price-in"><small>$70.00</small> $40.00</span>
-							</div>
-								<div class="fashion">
-									<a href="#"><img class="img-responsive " src="images/f3.jpg" alt="">
-									<p class="new1">NEW</p></a>
-								</div>
-							<div class="clearfix"> </div>
-							</div>
-
-			</div>
-			<div class="col-md-4 footer-bottom">
-				<h3>Get In Touch</h3>
-				<div class="logo-footer">
-					<ul class="social">
-		                    <li><a href="#"><i class="fb"> </i> </a></li>
-		                    <li><a href="#"><i class="rss"></i></a></li>
-		                    <li><a href="#"><i class="twitter"></i></a></li>
-		                    <li><a href="#"><i class="dribble"></i></a></li>
-		                    <div class="clearfix"></div>
-		                </ul>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="indo">
-					<ul class="social-footer ">
-						<li><span><i class="glyphicon glyphicon-earphone"> </i>+62 226759804 </span></li>
-						<li><a href="mailto:info@example.com"><i class="glyphicon glyphicon-envelope" class="mes"> </i>info@example.com</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-link" class="mes-in"> </i>http://example.com</a></li>
-					</ul>
-					<a href="#"><img src="images/pa.png" alt=""></a>
-					</div>
-			</div>
-			<div class="clearfix"> </div>
-			<p class="footer-class">Copyrights © 2015 I Wear. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-		</div>
-	</div>
-				 <!---->
-<script type="text/javascript">
-		$(document).ready(function() {
-				/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-				*/
-		$().UItoTop({ easingType: 'easeOutQuart' });
-});
-</script>
-<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!----> 
-<!---->
 </body>
 </html>
+<%@include file="/WEB-INF/view/Footer.jsp" %>

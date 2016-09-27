@@ -3,17 +3,18 @@
     <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@include file="/WEB-INF/view/Header.jsp" %>
     
 <!DOCTYPE html>
 <html>
 <head>
 <title>Wedding Store A Ecommerce Category Flat Bootstrap Responsive Website Template | Login :: w3layouts</title>
-<link href="<c:url value="resources/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="all" />
+<link href="<c:url value="/resources/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="<c:url value="resources/js/jquery.min.js"/>"></script>
+<script src="<c:url value="/resources/js/jquery.min.js"/>"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
-<link href="<c:url value="resources/css/style.css"/>" rel="stylesheet" type="text/css" media="all" />
+<link href="<c:url value="/resources/css/style.css"/>" rel="stylesheet" type="text/css" media="all" />
 
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,26 +23,26 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- start menu -->
-<script src="<c:url value="resources/simpleCart.min.js"/>"></script>
+<script src="<c:url value="/resources/simpleCart.min.js"/>"></script>
 
 <!-- start menu -->
-<link href="<c:url value="resources/css/memenu.css"/>" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="<c:url value="resources/js/memenu.js"/>"></script>
+<link href="<c:url value="/resources/css/memenu.css"/>" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="<c:url value="/resources/js/memenu.js"/>"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
 <!-- /start menu -->
 </head>
 <body> 
 
-<div class="login_sec">
+ <div class="login_sec">
 	 <div class="container">
 		 <ol class="breadcrumb">
 		  <li><a href="INDEX">Home</a></li>
 		  <li class="active">login</li>
-		 </ol>
-		 <h2>Login</h2>
+		  </ol>
+ 		 <h2>Login</h2>
 		 <div class="col-md-6 log">			 
 				 <p>Welcome, please enter the following to continue.</p>
-				 <p>If you have previously Login with us, <span>click here</span></p>
+				<!--  <p>If you have previously Login with us, <span>click here</span></p> -->
 				
 				 <form name="loginForm" action="<c:url value='/j_spring_security_check' />" method="post">
 				  <c:if test="${not empty error}">
@@ -56,10 +57,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 <h5>Password:</h5>
 					 <input type="password" id="password" name="password"/>					
 					 <input type="submit" value="login">					 
-					  <a class="acount-btn" href="login">Create an Account</a>
+					  <a class="acount-btn" href="Register">Create an Account</a>
 					   <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 				 </form>
-				 <a href="#">Forgot Password ?</a>
+				 
 					
 		 </div>	
 				
@@ -67,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 </div>
 </div>
 <!---->
-<div class="footer">
+<%-- <div class="footer">
 		<div class="container">
 			<div class="col-md-4 footer-top">
 				<h3>Quick Contact</h3>
@@ -92,11 +93,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="grid-product">
 								<h6><a href="#" >Fashion Combo Goggles</a></h6>
 								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
 								</div>
 								<span class=" price-in"><small>$70.00</small> $40.00</span>
 							</div>
@@ -110,11 +111,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="grid-product">
 								<h6><a href="#" >Classic Combo Goggles</a></h6>
 								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
 								</div>
 								<span class=" price-in"><small>$70.00</small> $40.00</span>
 							</div>
@@ -128,11 +129,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="grid-product">
 								<h6><a href="#" >sun Combo Goggles</a></h6>
 								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
+									<span>â˜†</span>
 								</div>
 								<span class=" price-in"><small>$70.00</small> $40.00</span>
 							</div>
@@ -166,7 +167,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 			</div>
 			<div class="clearfix"> </div>
-			<p class="footer-class">Copyrights © 2015 I Wear. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+			<p class="footer-class">Copyrights Â© 2015 I Wear. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 		</div>
 	</div>
 				 <!---->
@@ -184,7 +185,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 });
 </script>
 <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!----> 
+<!---->  --%>
 </body>
 </html>
+<%@include file="/WEB-INF/view/Footer.jsp" %>
     

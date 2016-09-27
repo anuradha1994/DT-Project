@@ -2,6 +2,8 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page session="false"%>
+
+<%@include file="/WEB-INF/view/Header.jsp" %>
 <html>
 <head>
 <title>Category Page</title>
@@ -47,17 +49,15 @@
 <body>
 	<h1>Add a Category</h1>
 
-	<%-- <c:url var="addAction" value="categories/add"></c:url> --%>
+	<c:url var="addAction" value="/manageCategory/add"></c:url>
 
-	<form:form action="categories/add" commandName="category">
+	<form:form action="${addAction}" commandName="category">
 		<table>
 			<tr>
 				<td><form:label path="id">
 						<spring:message text="ID" />
 					</form:label></td>
-					<td><form:input path="id" required="true"  />
-						</td>
-				<%-- <c:choose>
+				<c:choose>
 					<c:when test="${!empty category.id}">
 						<td><form:input path="id" disabled="true" readonly="true" />
 						</td>
@@ -66,7 +66,7 @@
 					<c:otherwise>
 						<td><form:input path="id" patttern =".{6,7}" required="true" title="id should contains 6 to 7 characters" /></td>
 					</c:otherwise>
-				</c:choose> --%>
+				</c:choose>
 			<tr>
 			<form:input path="id" hidden="true"  />
 				<td><form:label path="name">
@@ -81,16 +81,17 @@
 				<td><form:input path="description" required="true" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><%-- <c:if test="${!empty category.name}">
+				<td colspan="2"><c:if test="${!empty category.name}">
 						<input type="submit"
 							value="<spring:message text="Edit Category"/>" />
-					</c:if> <c:if test="${empty category.name}"> --%>
+					</c:if> <c:if test="${empty category.name}">
 						<input type="submit" value="<spring:message text="Add Category"/>" />
-					<%-- </c:if> --%></td>
+					</c:if></td>
 			</tr>
 		</table>
 	</form:form>
 	<br>
+
 	<h3>Category List</h3>
 	<c:if test="${!empty categoryList}">
 		<table class="tg">
@@ -106,11 +107,12 @@
 					<td>${category.id}</td>
 					<td>${category.name}</td>
 					<td>${category.description}</td>
-					<td><a href="<c:url value='categories/edit/${category.id}' />">Edit</a></td>
-					<td><a href="<c:url value='categories/remove/${category.id}' />">Delete</a></td>
+					<td><a href="<c:url value='manageCategory/edit/${category.id}' />">Edit</a></td>
+					<td><a href="<c:url value='manageCategory/remove/${category.id}' />">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>
 	</c:if>
 </body>
 </html>
+<%@include file="/WEB-INF/view/Footer.jsp" %>

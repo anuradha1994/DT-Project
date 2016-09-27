@@ -7,9 +7,9 @@
 
 <body>
      <div id="adminHome">
-     <a  href="categories">Manage Categories</a> &nbsp; &nbsp;
-     <a  href="suppliers">Manage Suppliers</a> &nbsp; &nbsp;
-     <a  href="products">Manage Products</a> &nbsp; &nbsp;
+     <a  href="manageCategory">Manage Categories</a> &nbsp; &nbsp;
+     <a  href="manageSupplier">Manage Suppliers</a> &nbsp; &nbsp;
+     <a  href="manageProduct">Manage Products</a> &nbsp; &nbsp;
      
      </div>
 

@@ -2,6 +2,9 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page session="false"%>
+<%@include file="/WEB-INF/view/Admin.jsp" %>
+
+
 <html>
 <head>
 <title>Supplier Page</title>
@@ -22,7 +25,7 @@
 	word-break: normal;
 	border-color: #ccc;
 	color: #333;
-	background-color: #fff;
+	background-color: #b29d85;
 }
 
 .tg th {
@@ -36,15 +39,27 @@
 	word-break: normal;
 	border-color: #ccc;
 	color: #333;
-	background-color: #f0f0f0;
+	background-color:  #8FBC8F;
 }
 
 .tg .tg-4eph {
-	background-color: #f9f9f9
+	background-color: #FFCC99;
 }
+body{
+background-color:#800080;
+}
+body{
+background-color:rgb(160,160,160)
+
+
+}
+
+
+
 </style>
 </head>
 <body>
+
 	<h1>Add a Supplier</h1>
 
 	<c:url var="addAction" value="/manageSupplier/add"></c:url>
@@ -112,3 +127,36 @@
 	</c:if>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
