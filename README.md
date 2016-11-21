@@ -1,5 +1,4 @@
-# DT-Project
-ShoppingCartFrontEnd
+# DT-Project    
 Name:Shopping Cart FrontEnd.
 Description:It is an E-commerce website,where the user can buy different type of goggles.
 Readme
