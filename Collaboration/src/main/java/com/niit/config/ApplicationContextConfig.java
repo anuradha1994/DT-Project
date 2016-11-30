@@ -82,6 +82,7 @@ public class ApplicationContextConfig {
 		sessionBuilder.addAnnotatedClass(Blog.class);
 		sessionBuilder.addAnnotatedClass(Event.class);
 		sessionBuilder.addAnnotatedClass(Job.class);
+		
 		sessionBuilder.addAnnotatedClass(JobRegistration.class);
 		return sessionBuilder.buildSessionFactory();
 	}

@@ -67,7 +67,12 @@ letzChaat.config(function($routeProvider) {
 		templateUrl:"adminForum.html",
 		controller:'adminForumController'
 	})
-
+	/*.when("/chat",
+	{
+		templateUrl:"chat.html",
+		controller:'ChatCtrl'
+	})
+*/
 	
 	
 	
@@ -726,8 +731,8 @@ letzChaat.controller("forumController",function($scope,$http,$rootScope)
 						forumId:$scope.forumId,
 						name:$scope.name,
 						topic:$scope.topic,
-						description:$scope.description,
-						userID:$scope.userID,
+						content:$scope.content,
+						usersID:$scope.usersID,
 						dateOfCreation:$scope.dateOfCreation,
 						/*content:$scope.content,
 						category:$scope.category*/
@@ -755,8 +760,8 @@ letzChaat.controller("forumController",function($scope,$http,$rootScope)
 						forumId:$scope.forumDataToEdit.forumId,
 						name:$scope.forumDataToEdit.name,
 						topic:$scope.forumDataToEdit.topic,
-						description:$scope.forumDataToEdit.description,
-						userID:$scope.forumDataToEdit.userID,
+						content:$scope.forumDataToEdit.content,
+						usersID:$scope.forumDataToEdit.usersID,
 						dateOfCreation:$scope.forumDataToEdit.dateOfCreation,
 						
 		 				
@@ -819,7 +824,7 @@ letzChaat.controller("adminForumController",function($scope,$http,$rootScope)
 				var dataObj = {
 						forumId:$scope.forumId,
 						title:$scope.title,
-						description:$scope.	description,
+						content:$scope.	content,
 
 						usersID:$scope.usersID,
 						forumDate:$scope.forumDate,
@@ -848,8 +853,8 @@ letzChaat.controller("adminForumController",function($scope,$http,$rootScope)
 						forumId:$scope.forumDataToEdit.forumId,
 						name:$scope.forumDataToEdit.name,
 						topic:$scope.forumDataToEdit.topic,
-						description:$scope.forumDataToEdit.description,
-						userID:$scope.forumDataToEdit.userID,
+						content:$scope.forumDataToEdit.content,
+						usersID:$scope.forumDataToEdit.usersID,
 						dateOfCreation:$scope.forumDataToEdit.dateOfCreation,
 						
 		 		};
@@ -1143,7 +1148,24 @@ letzChaat.controller('jobsController',function($scope,$http)
   		});
     }
 		});
-   
+
+
+/*
+letzChaat.controller("ChatCtrl", function($scope, ChatService) {
+	  $scope.messages = [];
+	  $scope.message = "";
+	  $scope.max = 140;
+
+	  $scope.addMessage = function() {
+	    ChatService.send($scope.message);
+	    $scope.message = "";
+	  };
+
+	  ChatService.receive().then(null, null, function(message) {
+	    $scope.messages.push(message);
+	  });
+	});
+*/   
 
 
 
