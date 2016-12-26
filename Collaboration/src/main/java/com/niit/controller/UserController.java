@@ -60,5 +60,20 @@ public class UserController {
 		 }
 		 return result;
 	 }
+	 
+	 
+	 @RequestMapping(value="/logout", method=RequestMethod.GET,headers="Accept=application/json")
+	 public void logout(HttpSession session)
+	 {
+		session.invalidate(); 
+		 
+		 
+		 
+	 }
+		 
+	 }
+	
+	 
+	
 
-}
+

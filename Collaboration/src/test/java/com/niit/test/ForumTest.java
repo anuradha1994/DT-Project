@@ -1,5 +1,7 @@
 package com.niit.test;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -29,8 +31,45 @@ public class ForumTest {
 		forum.setForumId("FORUM_001");
 		forum.setName("niit1");
 		forum.setContent("description");
-		//forum.setContent("Content");
-		forum.setDateOfCreation(new Date());
+		//forum.setContent("Content
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
+		
+		
+		
+		
+		
+		
+		//myString = DateFormat.getDateInstance().format(myDate);
+		
+		// Get the date today using Calendar object.
+		Date today = new Date();        
+		// Using DateFormat format method we can create a string 
+		// representation of a date with the defined format.
+		String reportDate = df.format(today);
+
+		// Print what date is today!
+		System.out.println("Report Date: " + reportDate);
+		
+		forum.setDateOfCreation(reportDate);		
+		
 		forum.setTopic("insti1");
 		forum.setUsersID(5);
 		//forum.setCategory("this is category");

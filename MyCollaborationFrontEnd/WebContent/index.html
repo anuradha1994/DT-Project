@@ -1,6 +1,7 @@
 
  <!DOCTYPE html>
-<html lang="en">
+<html ng-app="Collaboration" ng-init="blogitem=true;contact=true;shortcodes=true;pricing=true;portfolio=true;blog=false;users=false;adminJobs=false;adminBlog=false;jobs=false;login=true;register=true;about=true;services=true;home=true;logout=false;chat=false">
+
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
@@ -49,7 +50,7 @@ http://www.templatemo.com/tm-475-holiday
   </head>
   
   
-  <body class="tm-gray-bg" ng-app="Collaboration">
+  <body class="tm-gray-bg">
   
   	<!-- Header -->
   	<div class="tm-header">
@@ -69,21 +70,33 @@ http://www.templatemo.com/tm-475-holiday
 			<h1 class="logo"><a href="index.html#home">DSGN NYC</a></h1>
 			<i class="fa fa-times menu-close"></i>
 			<a href="#index" class="active">Home</a>
-							<a href="#register">register</a>
-							<a href="#login">login</a>
+							<a href="#register" ng-show="register">register</a>
+							<a href="#login"ng-show="login">login</a>
 							
-							<a href="#blog">Blog</a>
+							<a href="#blog"ng-show="blog">Blog</a>
 							
-							<a href="#event">Event</a>
-							<a href="chat.html">Chat</a>
+							<a href="#event"ng-show="event">Event</a>
+							<a href="#forum"ng-show="forum">Forum</a>
+							<a href="chat.html"ng-show="chat">Chat</a>
 							
-							<a href="#jobs">Jobs</a></li>
+							<a href="#jobs"ng-show="jobs">Jobs</a></li>
+							<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"  ng-show="logout">Friends <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#friends" ng-show="logout">Friends</a></li>
+                                <li><a href="#friendsRequests" ng-show="logout">friendsRequests</a></li>
+                              	<li><a href="#myFriends" ng-show="logout">myFriends</a></li>
+                                 <!--  <li><a href="#shortcodes" >Shortcodes</a></li> -->
+                            </ul>
+                        </li>
 							
 							<a href="#adminBlog" ng-show="adminBlog">Admin Blog</a></li>
 							<a href="#adminEvent" ng-show="adminEvent">Admin Event</a>
 							<a href="#adminForum" ng-show="adminForum">Admin Forum</a>
 							<a href="#adminJobs" ng-show="adminJobs">Admin Jobs</a>
+							<a href="#about">About</a>
 							<a href="#contact">Contact</a>
+							<a href="#logout" ng-show="logout">logout</a>
 		</div>
 		
 		<!-- Menu button -->
@@ -126,7 +139,7 @@ http://www.templatemo.com/tm-475-holiday
 	
 	
 	
-	
+	<img src="img/tours-05.jpg" style="width:1920px;height:400px;">
 	
 	
 	
@@ -382,5 +395,4 @@ http://www.templatemo.com/tm-475-holiday
 
 	  	});
 	</script>
- 
  

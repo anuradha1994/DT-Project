@@ -21,6 +21,8 @@ import com.niit.dao.EventDao;
 import com.niit.dao.EventDaoImpl;
 import com.niit.dao.ForumDao;
 import com.niit.dao.ForumDaoImpl;
+import com.niit.dao.FriendsDAO;
+import com.niit.dao.FriendsDAOImpl;
 import com.niit.dao.JobsDao;
 import com.niit.dao.JobsDaoImpl;
 import com.niit.dao.UsersDetailDao;
@@ -28,6 +30,7 @@ import com.niit.dao.UsersDetailDaoImpl;
 import com.niit.model.Blog;
 import com.niit.model.Event;
 import com.niit.model.Forum;
+import com.niit.model.Friends;
 import com.niit.model.Job;
 import com.niit.model.JobRegistration;
 import com.niit.model.UsersDetail;
@@ -81,6 +84,7 @@ public class ApplicationContextConfig {
 		sessionBuilder.addAnnotatedClass(Forum.class);
 		sessionBuilder.addAnnotatedClass(Blog.class);
 		sessionBuilder.addAnnotatedClass(Event.class);
+		sessionBuilder.addAnnotatedClass(Friends.class);
 		sessionBuilder.addAnnotatedClass(Job.class);
 		
 		sessionBuilder.addAnnotatedClass(JobRegistration.class);
@@ -119,11 +123,21 @@ public class ApplicationContextConfig {
 	public BlogDao getBlogDao(SessionFactory sessionFactory) {
 		return new BlogDaoImpl(sessionFactory);
 	}
-
 	@Autowired
 	@Bean(name = "forumDao")
 	public ForumDao getForumDao(SessionFactory sessionFactory) {
 		return new ForumDaoImpl(sessionFactory);
 	}
+	
+	
+	
+
+	@Autowired
+	@Bean(name = "friendsDAO")
+	public FriendsDAO getFriendsDAO(SessionFactory sessionFactory) {
+		
+		return new FriendsDAOImpl(sessionFactory);
+	}
+
 
 }

@@ -11,15 +11,15 @@
     <table class="table table-striped">
     <thead>
       <tr>
-    <th>blogId</th>
-        <th>title</th>
-        <th>usersID</th>
-         <th>dateOfCreation</th>
-          <th>content</th>
-           <th>category</th>
-           <th>view for approval</th>
-          <th>edit</th>
-          <th>delete</th>
+    <th>Blog ID</th>
+        <th>Title</th>
+        <th>UsersID</th>
+         <th>Date Of Creation</th>
+          <th>Content</th>
+           <th>Category</th>
+          <th>View</th>
+          <th>Edit</th>
+           <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -27,13 +27,13 @@
        <td>{{blog.blogId}}</td>
         <td>{{blog.title}}</td>
         <td>{{blog.usersID}}</td>
-        <td>{{blog.dateOfCreation}}</td>
+        <td>{{blog.blogCreationDate}}</td>
         <td>{{blog.content}}</td>
          <td>{{blog.category}}</td>
         <td><button type="button" class="btn btn-primary btn-sm "  data-toggle="modal" data-target="#viewblog" ng-click="editBlog(blog)">View</button></td>
-        <td><button type="button" class="btn btn-primary btn-sm "  data-toggle="modal" data-target="#editblog" ng-click="editBlog(blog)">Edit</button></td>
-          <td><button type="button" class="btn btn-danger btn-sm " data-toggle="modal" data-target="#deleteblog" ng-click="editBlog(blog)">Delete</button></td> 
-       
+        
+         <td><button type="button" class="btn btn-primary btn-sm "  data-toggle="modal" data-target="#editblog" ng-click="editBlog(blog)">Edit Blog</button></td>
+          <td><button type="button" class="btn btn-primary btn-sm " data-toggle="modal" data-target="#deleteblog" ng-click="editBlog(blog)">Delete</button></td>
       </tr>
        </tbody>
   </table>
@@ -97,6 +97,8 @@
       
     </div>
   </div>
+  
+  
   <!-- Modal -->
   <div class="modal fade" id="viewblog" role="dialog">
     <div class="modal-dialog">
@@ -105,10 +107,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">view Blog</h4>
+          <h4 class="modal-title">View Blog</h4>
         </div>
         <div class="modal-body">
-         <form class="form-horizontal">
+        <!--  <form class="form-horizontal">
          <div class="form-group">
     <label class="control-label col-sm-2" for="blogId">Blog_Id</label>
     <div class="col-sm-10"> 
@@ -144,45 +146,84 @@
     
     
     
-    
-    
-    
-      <div ng-if="blogDataToEdit.approved==1">
-            	<button type="button" class="btn btn-primary btn-sm">Posted</button>
-         </div>
-          <div ng-if="blogDataToEdit.approved==0">
-          
-          
-          
-          <button type="submit" class="btn btn-primary btn-lg" ng-click="approveBlog(1)" data-dismiss="modal">Approve</button>
-      
-      <button type="submit" class="btn btn-primary btn-lg" ng-click="approveBlog(2)" data-dismiss="modal">Reject</button>
-      
-            	
-         </div>
-         <div ng-if="blogDataToEdit.approved==2">
-            	<button type="button" class="btn btn-primary btn-sm">Rejected</button>
+    <div ng-if="blogDataToEdit.approved==0">
+      <button type="submit" class="btn btn-primary btn-lg" ng-click="approveBlog(1)" data-dismiss="modal">Approve</button>
+        <button type="submit" class="btn btn-primary btn-lg" ng-click="approveBlog(2)" data-dismiss="modal">Reject</button>
+    </div>
+        
+        <div ng-if="blogDataToEdit.approved==1">
+            	<button type="button" class="btn btn-primary btn-lg">Posted</button>
          </div>
          
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
+         <div ng-if="blogDataToEdit.approved==2">
+            	<button type="button" class="btn btn-primary btn-lg">Rejected</button>
+         </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </div>
   </div>
-</form>
+</form> -->
+
+
+ <table>
+ <tr>
+ <th>Blog ID</th>
+ <td>{{blogDataToEdit.blogId}}</td>
+ 
+ </tr>
+ <tr>
+ <th>Title</th>
+   <td>{{blogDataToEdit.title}}</td>
+ </tr>
+ <tr>
+  <th>UsersID</th>
+   <td>{{blogDataToEdit.usersID}}</td>
+ </tr>
+ 
+ <tr>
+ <th>Date Of Creation</th>
+        <td>{{blogDataToEdit.blogCreationDate}}</td>
+ </tr>
+ <tr>
+ <th>Content</th>
+ <td>{{blogDataToEdit.content}}</td>
+ </tr>
+ <tr>
+  <th>Category</th>
+  <td>{{blogDataToEdit.category}}</td>
+ </tr>
+  </table>
+
+
+ <div ng-if="blogDataToEdit.approved==0">
+      <button type="submit" class="btn btn-primary btn-lg" ng-click="approveBlog(1)" data-dismiss="modal">Approve</button>
+        <button type="submit" class="btn btn-primary btn-lg" ng-click="approveBlog(2)" data-dismiss="modal">Reject</button>
+    </div>
+        
+        <div ng-if="blogDataToEdit.approved==1">
+            	<button type="button" class="btn btn-primary btn-lg">Posted</button>
+         </div>
+         
+         <div ng-if="blogDataToEdit.approved==2">
+            	<button type="button" class="btn btn-primary btn-lg">Rejected</button>
+         </div>
+
+
+
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -191,9 +232,11 @@
       
     </div>
   </div>
- <!-- 
- /*edit*/ -->
- 
+  
+  
+  
+  
+  <!-- Modal -->
   <div class="modal fade" id="editblog" role="dialog">
     <div class="modal-dialog">
     
@@ -232,8 +275,9 @@
   
   <div class="form-group"> 
     <div class="col-sm-offset-2 col-sm-10">
-    <button type="submit" class="btn-primary btn-lg" ng-click="saveEdit()" data-dismiss="modal">save edit</button>
-   </div>
+      <button type="submit" class="btn btn-primary btn-lg" ng-click="saveEdit()" data-dismiss="modal">Save edit</button>
+       
+    </div>
   </div>
 </form>
         </div>
@@ -244,26 +288,12 @@
       
     </div>
   </div>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+  
+  
+  
+  
+  
+  
   <!-- Modal -->
   <div class="modal fade" id="deleteblog" role="dialog">
     <div class="modal-dialog">

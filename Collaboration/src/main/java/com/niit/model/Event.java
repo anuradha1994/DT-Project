@@ -1,13 +1,10 @@
 package com.niit.model;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
 
@@ -15,34 +12,24 @@ import org.springframework.stereotype.Component;
 @Component
 public class Event {
 	
-	@Id 
+	@Id
 	public String eventId;
 	public String title;
 	public String description;
 	public int usersID;
-	public Date eventDate;
+//	public Date  eventDate;
 	public String venue;
-	@Transient
-	private String errorCode;
-	@Transient
-	private String errorMessage;
-
-	public String getErrorCode() {
-		return errorCode;
-	}
-
-	public void setErrorCode(String errorCode) {
-		this.errorCode = errorCode;
-	}
-
-	public String getErrorMessage() {
-		return errorMessage;
-	}
-
-	public void setErrorMessage(String errorMessage) {
-		this.errorMessage = errorMessage;
-	}
+	public String dateOfEvent;
 	
+	
+	public String getDateOfEvent() {
+		return dateOfEvent;
+	}
+
+	public void setDateOfEvent(String dateOfEvent) {
+		this.dateOfEvent = dateOfEvent;
+	}
+
 	public int getUsersID() {
 		return usersID;
 	}
@@ -69,12 +56,12 @@ public class Event {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Date getEventDate() {
+	/*public Date  getEventDate() {
 		return eventDate;
 	}
-	public void setEventDate(Date eventDate) {
+	public void setEventDate(Date  eventDate) {
 		this.eventDate = eventDate;
-	}
+	}*/
 	public String getVenue() {
 		return venue;
 	}
